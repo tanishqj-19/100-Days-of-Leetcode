@@ -1,11 +1,13 @@
 class Solution {
 public:
-    string toLowerCase(string s) {
-        string c = "";
-        for(int i=0; i<s.size(); i++){
-            c += tolower(s[i]);
+    string toLowerCase(string &s) {
+        
+        for(auto &c: s){
+            if(c >= 'A' && c <= 'Z'){
+                c += 32;
+            }
         }
 
-        return c;
+        return s;
     }
 };
